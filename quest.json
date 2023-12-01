@@ -1,0 +1,109 @@
+{
+    "name": "PickupCoins",
+    "description": "Add kind to the firs action",
+    "definition": {
+        "steps": [
+            {
+                "id": "start_talk",
+                "description": "Talk to the NPC",
+                "tasks": [
+                    {
+                        "id": "start_quest",
+                        "description": "Start the quest",
+                        "actionItems": [
+                            {
+                                "type": "CUSTOM",
+                                "parameters": {
+                                    "id": "user_ok"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "pick_up_coins",
+                "description": "Pickups all coins",
+                "tasks": [
+                    {
+                        "id": "coin_1",
+                        "description": "Pickup coin 1",
+                        "actionItems": [
+                            {
+                                "type": "CUSTOM",
+                                "parameters": {
+                                    "id": "coin1"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "coin_2",
+                        "description": "Pickup coin 2",
+                        "actionItems": [
+                            {
+                                "type": "CUSTOM",
+                                "parameters": {
+                                    "id": "coin2"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "coin_3",
+                        "description": "Pickup coin 3",
+                        "actionItems": [
+                            {
+                                "type": "CUSTOM",
+                                "parameters": {
+                                    "id": "coin3"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "coin_4",
+                        "description": "Pickup coin 4",
+                        "actionItems": [
+                            {
+                                "type": "CUSTOM",
+                                "parameters": {
+                                    "id": "coin4"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "finish_talk",
+                "description": "Talk again to the NPC",
+                "tasks": [
+                    {
+                        "id": "end_talk",
+                        "description": "Talk",
+                        "actionItems": [
+                            {
+                                "type": "CUSTOM",
+                                "parameters": {
+                                    "id": "receive_reward"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "connections": [
+            {
+                "stepFrom": "start_talk",
+                "stepTo": "pick_up_coins"
+            },
+            {
+                "stepFrom": "pick_up_coins",
+                "stepTo": "finish_talk"
+            }
+        ]
+    },
+    "imageUrl": "https://avatars.githubusercontent.com/u/36207937?v=4"
+}

@@ -1,0 +1,22 @@
+{
+  "ecs7": true,
+  "runtimeVersion": "7",
+  "display": {
+    "title": "SDK7 Pejo",
+    "description": "Pickup items"
+  },
+  "scene": {
+    "parcels": [
+      "0,0"
+    ],
+    "base": "0,0"
+  },
+  "main": "bin/index.js",
+  "requiredPermissions": [
+    "ALLOW_MEDIA_HOSTNAMES",
+    "USE_WEBSOCKET"
+  ],
+  "allowedMediaHostnames": [
+    "decentraland.org"
+  ]
+}
